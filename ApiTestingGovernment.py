@@ -79,7 +79,7 @@ class TestAPI(unittest.TestCase):
         response = requests.get(endpoint)
         json_data = response.json()
         self.assertEqual(response.status_code, 200)
-        self.assertTrue('foo' in name for name in json_data) 
+        self.assertTrue('1234567848204' in citizenid for citizenid in json_data) 
 
     def test_reservation_date_not_exist(self):
         endpoint = URL + f"reservation/20000/00/00"
